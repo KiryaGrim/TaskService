@@ -9,7 +9,7 @@ package task;
 service Task {
   rpc GetCourseTasksWithScores (GetCourseTasksWithScoresRequest) returns (GetCourseTasksWithScoresResponse) {
     option (google.api.http) = {
-      get: "/api/courses/{course_id}/tasks/scores"
+      get: "/api/tasks/{course_id}/scores"
     };
   }
 
@@ -29,7 +29,7 @@ service Task {
 
   rpc CreateTask (CreateTaskRequest) returns (CreateTaskResponse) {
     option (google.api.http) = {
-      post: "/api/courses/{course_id}/tasks"
+      post: "/api/tasks/{course_id}"
       body: "*"
     };
   }
@@ -49,7 +49,7 @@ service Task {
 
   rpc GetCourseTasks (GetCourseTasksRequest) returns (GetCourseTasksResponse) {
     option (google.api.http) = {
-      get: "/api/courses/{course_id}/tasks"
+      get: "/api/tasks/{course_id}"
     };
   }
 }
